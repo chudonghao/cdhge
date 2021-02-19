@@ -1,0 +1,14 @@
+#ifndef CDHGE_H_2021_2_18_619939EE26664E3B8696A9CFA5DA2053_
+#define CDHGE_H_2021_2_18_619939EE26664E3B8696A9CFA5DA2053_
+
+#if defined(WIN32)
+#if defined(BUILDING_CDHGE)
+#define CDHGE_EXPORT __declspec(dllexport)
+#else
+#define CDHGE_EXPORT __declspec(dllimport)
+#endif
+#else
+#define CDHGE_EXPORT
+#endif
+
+#endif // CDHGE_H_2021_2_18_619939EE26664E3B8696A9CFA5DA2053_
