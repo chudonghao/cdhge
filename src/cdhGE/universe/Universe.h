@@ -33,8 +33,10 @@ private:
   bool _evolving{false};
   /// 宇宙包含很多实体
   std::map<std::string, std::shared_ptr<Entity>> _entityList;
-  /// 宇宙的发展规律
-  std::map<int, std::shared_ptr<DevelopmentLow>> _developmentLowList;
+
+  struct {
+    std::vector<std::vector<Entity *>> layerStack;
+  } _evolutionTmpData;
 };
 
 } // namespace cdhGE::universe
