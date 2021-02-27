@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-namespace cdhGE {
+namespace s3ge {
 
 Logger *Logger::s_logger = new StdCoutLogger;
 Logger::Level Logger::s_logLevel = Logger::LEVEL_DEBUG;
@@ -25,7 +25,7 @@ const char *Logger::toString(Logger::Level level) {
 
 void Logger::setGlobalLogger(Logger *logger) {
   if (logger) {
-    CDHGE_LOG_TRACE << "changing logger. new logger name: " << logger->_name;
+    S3GE_LOG_TRACE << "changing logger. new logger name: " << logger->_name;
     delete s_logger;
     s_logger = logger;
   }
@@ -44,4 +44,4 @@ void StdCoutLogger::log(const char *file, int line, const char *func, Logger::Le
   std::cout << file << ":" << line << "[" << func << "][" << toString(level) << "] " << message << std::endl;
 }
 
-} // namespace cdhGE
+} // namespace s3ge

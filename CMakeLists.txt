@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(cdhGE)
+project(s3ge)
 
 set(CMAKE_CXX_STANDARD 17)
 

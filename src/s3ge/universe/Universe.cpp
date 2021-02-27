@@ -3,11 +3,9 @@
 #include <algorithm>
 #include <set>
 
-#include <cdhGE/core/Logger.h>
+#include <s3ge/core/Logger.h>
 
-#include "DLEntityEvolution.h"
-
-namespace cdhGE::universe {
+namespace s3ge::universe {
 
 struct Universe_EntityData {
   std::set<Entity *> dependOn;
@@ -30,10 +28,10 @@ struct Universe_EntityData {
 Universe::Universe() {}
 
 void Universe::evolve() {
-  CDHGE_LOG_TRACE << "start";
+  S3GE_LOG_TRACE << "start";
   if (_evolving) {
     // TODO 多线程问题
-    CDHGE_LOG_WARNING << "call evolve() twice";
+    S3GE_LOG_WARNING << "call evolve() twice";
     return;
   } else {
     _evolving = true;
@@ -66,7 +64,7 @@ void Universe::evolve() {
   }
 
   _evolving = false;
-  CDHGE_LOG_TRACE << "end";
+  S3GE_LOG_TRACE << "end";
 }
 
-} // namespace cdhGE::universe
+} // namespace s3ge::universe

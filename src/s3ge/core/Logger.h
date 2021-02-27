@@ -1,14 +1,14 @@
-#ifndef CDHGE_H_2021_2_19_1594A9696F8241768D731E341BFA3EBA_
-#define CDHGE_H_2021_2_19_1594A9696F8241768D731E341BFA3EBA_
+#ifndef S3GE_H_2021_2_19_1594A9696F8241768D731E341BFA3EBA_
+#define S3GE_H_2021_2_19_1594A9696F8241768D731E341BFA3EBA_
 
 #include <sstream>
 #include <string>
 
-#include <cdhGE/export.h>
+#include <s3ge/export.h>
 
-namespace cdhGE {
+namespace s3ge {
 
-class CDHGE_EXPORT Logger {
+class S3GE_EXPORT Logger {
 public:
   enum Level { LEVEL_TRACE, LEVEL_DEBUG, LEVEL_WARNING, LEVEL_ERROR, LEVEL_FATAL };
   static const char *toString(Level level);
@@ -58,13 +58,13 @@ private:
   Logger::Level level;
 };
 
-} // namespace cdhGE
+} // namespace s3ge
 
-#define CDHGE_LOG_(x) cdhGE::LogHelper(__FILE__, __LINE__, __func__, cdhGE::Logger::LEVEL_##x)
-#define CDHGE_LOG_TRACE CDHGE_LOG_(TRACE)
-#define CDHGE_LOG_DEBUG CDHGE_LOG_(DEBUG)
-#define CDHGE_LOG_WARNING CDHGE_LOG_(WARNING)
-#define CDHGE_LOG_ERROR CDHGE_LOG_(ERROR)
-#define CDHGE_LOG_FATAL CDHGE_LOG_(FATAL)
+#define S3GE_LOG_(x) s3ge::LogHelper(__FILE__, __LINE__, __func__, s3ge::Logger::LEVEL_##x)
+#define S3GE_LOG_TRACE S3GE_LOG_(TRACE)
+#define S3GE_LOG_DEBUG S3GE_LOG_(DEBUG)
+#define S3GE_LOG_WARNING S3GE_LOG_(WARNING)
+#define S3GE_LOG_ERROR S3GE_LOG_(ERROR)
+#define S3GE_LOG_FATAL S3GE_LOG_(FATAL)
 
-#endif // CDHGE_H_2021_2_19_1594A9696F8241768D731E341BFA3EBA_
+#endif // S3GE_H_2021_2_19_1594A9696F8241768D731E341BFA3EBA_

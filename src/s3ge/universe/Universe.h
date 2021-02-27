@@ -1,16 +1,15 @@
-#ifndef CDHGE_H_2021_2_19_C0A44291733D485F9A604112D1F408C2_
-#define CDHGE_H_2021_2_19_C0A44291733D485F9A604112D1F408C2_
+#ifndef S3GE_H_2021_2_19_C0A44291733D485F9A604112D1F408C2_
+#define S3GE_H_2021_2_19_C0A44291733D485F9A604112D1F408C2_
 
 #include <map>
 #include <memory>
 #include <vector>
 
-#include "DevelopmentLow.h"
 #include "Entity.h"
 
-#include <cdhGE/export.h>
+#include <s3ge/export.h>
 
-namespace cdhGE::universe {
+namespace s3ge::universe {
 
 /// \note
 /// 专有名词:
@@ -20,7 +19,7 @@ namespace cdhGE::universe {
 /// 这是我的宇宙
 /// 我的宇宙体现了我的宇宙观
 /// 我认为我的宇宙是由若干实体组成的,一切皆实体
-class CDHGE_EXPORT Universe {
+class S3GE_EXPORT Universe {
 public:
   Universe();
 
@@ -39,6 +38,6 @@ private:
   } _evolutionTmpData;
 };
 
-} // namespace cdhGE::universe
+} // namespace s3ge::universe
 
-#endif // CDHGE_H_2021_2_19_C0A44291733D485F9A604112D1F408C2_
+#endif // S3GE_H_2021_2_19_C0A44291733D485F9A604112D1F408C2_

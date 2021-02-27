@@ -1,2 +1,2 @@
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
-add_subdirectory(cdhGE)
+add_subdirectory(s3ge)

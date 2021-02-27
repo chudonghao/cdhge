@@ -9,15 +9,15 @@ set(
 )
 
 add_library(
-    cdhGE
+    s3ge
     SHARED
     ${SRCS}
 )
 
 target_compile_definitions(
-    cdhGE
+    s3ge
     PRIVATE
-    -DBUILDING_CDHGE
+    -DBUILDING_S3GE
 )
 
 ##########
@@ -27,16 +27,16 @@ foreach (SRC ${SRCS})
         get_filename_component(ABS_SRC ${SRC} ABSOLUTE)
         get_filename_component(ABS_DIR ${ABS_SRC} DIRECTORY)
         file(RELATIVE_PATH REL_DIR ${CMAKE_CURRENT_SOURCE_DIR} ${ABS_DIR})
-        install(FILES ${SRC} DESTINATION include/cdhGE/${REL_DIR})
+        install(FILES ${SRC} DESTINATION include/s3ge/${REL_DIR})
     endif ()
 endforeach ()
 
 install(
-    TARGETS cdhGE
+    TARGETS s3ge
     RUNTIME DESTINATION bin
     LIBRARY DESTINATION lib
     ARCHIVE DESTINATION lib
 )
 
 ##################################
-# TODO generate cdhGEConfig.cmake
+# TODO generate s3geConfig.cmake
