@@ -7,7 +7,7 @@
 
 namespace s3ge::universe {
 
-class S3GE_EXPORT Entity {
+class S3GE_API Entity {
 public:
   virtual void evolve() = 0;
 

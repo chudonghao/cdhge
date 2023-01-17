@@ -2,8 +2,7 @@
 
 #include <algorithm>
 #include <set>
-
-#include <s3ge/core/Logger.h>
+#include <string>
 
 namespace s3ge::universe {
 
@@ -28,10 +27,7 @@ struct Universe_EntityData {
 Universe::Universe() {}
 
 void Universe::evolve() {
-  S3GE_LOG_TRACE << "start";
   if (_evolving) {
-    // TODO 多线程问题
-    S3GE_LOG_WARNING << "call evolve() twice";
     return;
   } else {
     _evolving = true;
@@ -64,7 +60,6 @@ void Universe::evolve() {
   }
 
   _evolving = false;
-  S3GE_LOG_TRACE << "end";
 }
 
 } // namespace s3ge::universe

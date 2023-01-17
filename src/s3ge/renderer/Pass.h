@@ -1,0 +1,14 @@
+//
+// Created by chudonghao on 22-6-1.
+//
+
+#ifndef INC_CHUDONGHAO_22_6_1_5AA9AEE537344781B0BD124104AF2AD8_
+#define INC_CHUDONGHAO_22_6_1_5AA9AEE537344781B0BD124104AF2AD8_
+
+namespace s3ge {
+
+class Pass {};
+
+} // namespace s3ge
+
+#endif // INC_CHUDONGHAO_22_6_1_5AA9AEE537344781B0BD124104AF2AD8_

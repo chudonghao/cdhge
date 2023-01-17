@@ -19,7 +19,7 @@ namespace s3ge::universe {
 /// 这是我的宇宙
 /// 我的宇宙体现了我的宇宙观
 /// 我认为我的宇宙是由若干实体组成的,一切皆实体
-class S3GE_EXPORT Universe {
+class S3GE_API Universe {
 public:
   Universe();
 
