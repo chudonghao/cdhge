@@ -15,8 +15,8 @@ if (NOT TARGET cdhlog)
   message(FATAL_ERROR "cdhlog NOT Found")
 endif ()
 
-if (NOT TARGET s3ge)
-  message(FATAL_ERROR "s3ge NOT Found")
+if (NOT TARGET cdhge)
+  message(FATAL_ERROR "cdhge NOT Found")
 endif ()
 
 add_subdirectory(src)

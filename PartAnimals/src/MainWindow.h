@@ -9,7 +9,7 @@
 
 #include <QVulkanWindow>
 
-namespace s3ge::core {
+namespace cdhge::core {
 
 class Engine;
 
@@ -18,7 +18,7 @@ class Engine;
 class MainWindow : public QVulkanWindow {
   Q_OBJECT
 public:
-  explicit MainWindow(std::unique_ptr<s3ge::core::Engine> engine, QWindow *parent = nullptr);
+  explicit MainWindow(std::unique_ptr<cdhge::core::Engine> engine, QWindow *parent = nullptr);
 
   ~MainWindow();
 
@@ -26,7 +26,7 @@ public:
 
 protected:
 
-  std::unique_ptr<s3ge::core::Engine> _engine;
+  std::unique_ptr<cdhge::core::Engine> _engine;
 };
 
 #endif // INC_CHUDONGHAO_22_5_8_7E51E9ABB4604BDBB8C9893C7166A1D0_

@@ -4,7 +4,7 @@
 
 #include "Flow.h"
 
-namespace s3ge::flow {
+namespace cdhge::flow {
 
 Flow::Flow(void *user_data) : _user_data(user_data) {}
 
@@ -47,4 +47,4 @@ unsigned Flow::operator()() {
   return 0;
 }
 
-} // namespace s3ge::flow
+} // namespace cdhge::flow

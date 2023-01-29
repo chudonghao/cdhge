@@ -7,11 +7,11 @@
 
 #include <QVulkanWindowRenderer>
 
-#include <s3ge/core/Engine.h>
+#include <cdhge/core/Engine.h>
 
 class MainWindowRenderer : public QObject, public QVulkanWindowRenderer {
 public:
-  MainWindowRenderer(s3ge::core::Engine *engine, QVulkanWindow *parent);
+  MainWindowRenderer(cdhge::core::Engine *engine, QVulkanWindow *parent);
   ~MainWindowRenderer() override;
   void preInitResources() override;
   void initResources() override;
@@ -25,7 +25,7 @@ public:
 private:
   QVulkanWindow *_window{};
 
-  s3ge::core::Engine *_engine{};
+  cdhge::core::Engine *_engine{};
 };
 
 #endif // INC_CHUDONGHAO_22_5_8_E77C915D66404813B440DBF754A966C9_

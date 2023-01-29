@@ -5,7 +5,7 @@
 
 #include <cdhlog_setup.hpp>
 
-#include <s3ge/core/Engine.h>
+#include <cdhge/core/Engine.h>
 
 #include "MainWindow.h"
 
@@ -24,12 +24,10 @@ MainWindow *CreateMainWindow() noexcept(false) {
     }
   }
 
-  auto renderer = std::make_unique<s3ge::renderer::Renderer>();
-  if (int err = renderer->Init(vk::Instance(vi->vkInstance()))) {
-    throw std::runtime_error("init renderer failed");
-  }
+  auto renderer = std::make_unique<cdhge::renderer::Renderer>();
+  renderer->Init(vk::Instance(vi->vkInstance()));
 
-  auto engine = std::make_unique<s3ge::core::Engine>();
+  auto engine = std::make_unique<cdhge::core::Engine>();
   engine->set_renderer(std::move(renderer));
 
   auto main_window = new MainWindow(std::move(engine));

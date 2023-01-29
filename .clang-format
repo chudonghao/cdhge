@@ -13,3 +13,5 @@ BreakConstructorInitializers: AfterColon
 
 SortIncludes: CaseSensitive
 IncludeBlocks: Preserve
+
+AlignEscapedNewlines: Left

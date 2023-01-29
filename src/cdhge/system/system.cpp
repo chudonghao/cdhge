@@ -4,4 +4,4 @@
 
 #include "system.h"
 
-namespace s3ge::system {}
+namespace cdhge::system {}

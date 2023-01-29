@@ -5,10 +5,10 @@
 #ifndef INC_CHUDONGHAO_22_6_1_5AA9AEE537344781B0BD124104AF2AD8_
 #define INC_CHUDONGHAO_22_6_1_5AA9AEE537344781B0BD124104AF2AD8_
 
-namespace s3ge {
+namespace cdhge {
 
 class Pass {};
 
-} // namespace s3ge
+} // namespace cdhge
 
 #endif // INC_CHUDONGHAO_22_6_1_5AA9AEE537344781B0BD124104AF2AD8_

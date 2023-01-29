@@ -1,19 +1,19 @@
 file(GLOB SRCS */*.cpp */*.h)
 
 add_library(
-  s3ge
+  cdhge
   SHARED
   ${SRCS}
 )
 
 set_property(
-  TARGET s3ge
+  TARGET cdhge
   PROPERTY INTERFACE_INCLUDE_DIRECTORIES
   ${CMAKE_CURRENT_SOURCE_DIR}/../
 )
 
 target_link_libraries(
-  s3ge
+  cdhge
   PUBLIC
   glm::glm
 )
@@ -25,16 +25,16 @@ foreach (SRC ${SRCS})
     get_filename_component(ABS_SRC ${SRC} ABSOLUTE)
     get_filename_component(ABS_DIR ${ABS_SRC} DIRECTORY)
     file(RELATIVE_PATH REL_DIR ${CMAKE_CURRENT_SOURCE_DIR} ${ABS_DIR})
-    install(FILES ${SRC} DESTINATION include/s3ge/${REL_DIR})
+    install(FILES ${SRC} DESTINATION include/cdhge/${REL_DIR})
   endif ()
 endforeach ()
 
 install(
-  TARGETS s3ge
+  TARGETS cdhge
   RUNTIME DESTINATION bin
   LIBRARY DESTINATION lib
   ARCHIVE DESTINATION lib
 )
 
 ##################################
-# TODO generate s3geConfig.cmake
+# TODO generate cdhgeConfig.cmake

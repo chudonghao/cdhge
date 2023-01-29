@@ -3,6 +3,6 @@
 //
 
 #define VULKAN_HPP_STORAGE_SHARED_EXPORT 1
-#include "Vulkan.h"
+#include "vulkan.h"
 
 VULKAN_HPP_DEFAULT_DISPATCH_LOADER_DYNAMIC_STORAGE
